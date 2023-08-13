@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profile_details",
+  "info": {
+    "singularName": "profile-detail",
+    "pluralName": "profile-details",
+    "displayName": "profileDetail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "yearsOfExperience": {
+      "type": "integer",
+      "min": 0
+    },
+    "showSalaryForCompanyies": {
+      "type": "boolean",
+      "default": false
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    },
+    "salaryRange": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::salary-range.salary-range"
+    },
+    "education_level": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::education-level.education-level"
+    },
+    "jobLevel": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::job-level.job-level"
+    },
+    "workingCities": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::city.city",
+      "mappedBy": "profileDetails"
+    },
+    "jobRoles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::job-role.job-role",
+      "inversedBy": "profileDetails"
+    },
+    "jobTypes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::job-type.job-type",
+      "inversedBy": "profileDetails"
+    }
+  }
+}

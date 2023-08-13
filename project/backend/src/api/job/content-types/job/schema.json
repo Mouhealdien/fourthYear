@@ -1,0 +1,88 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "job",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "jobTitle": {
+      "type": "string",
+      "required": true
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female"
+      ]
+    },
+    "ageRange": {
+      "type": "enumeration",
+      "enum": [
+        "from 20  to 30",
+        "from 30 to 40"
+      ]
+    },
+    "education": {
+      "type": "string"
+    },
+    "experience": {
+      "type": "string"
+    },
+    "salary": {
+      "type": "biginteger"
+    },
+    "languages": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::language.language",
+      "inversedBy": "jobs"
+    },
+    "jobRoles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::job-role.job-role",
+      "inversedBy": "jobs"
+    },
+    "jobType": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::job-type.job-type"
+    },
+    "jobLevel": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::job-level.job-level"
+    },
+    "yearOfExperience": {
+      "type": "integer"
+    },
+    "jobDescription": {
+      "type": "richtext"
+    },
+    "jobRequirements": {
+      "type": "richtext"
+    },
+    "numberOfVacancies": {
+      "type": "integer"
+    },
+    "city": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::city.city"
+    },
+    "address": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    }
+  }
+}

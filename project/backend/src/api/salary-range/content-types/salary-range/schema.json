@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "salary_ranges",
+  "info": {
+    "singularName": "salary-range",
+    "pluralName": "salary-ranges",
+    "displayName": "salaryRange"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "details": {
+      "type": "string"
+    }
+  }
+}

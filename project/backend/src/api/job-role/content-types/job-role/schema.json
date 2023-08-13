@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_roles",
+  "info": {
+    "singularName": "job-role",
+    "pluralName": "job-roles",
+    "displayName": "jobRole",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "details": {
+      "type": "string"
+    },
+    "jobs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::job.job",
+      "mappedBy": "jobRoles"
+    },
+    "companies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::company.company",
+      "mappedBy": "jobRoles"
+    },
+    "profileDetails": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::profile-detail.profile-detail",
+      "mappedBy": "jobRoles"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "education_levels",
+  "info": {
+    "singularName": "education-level",
+    "pluralName": "education-levels",
+    "displayName": "educationLevel"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "details": {
+      "type": "string"
+    }
+  }
+}

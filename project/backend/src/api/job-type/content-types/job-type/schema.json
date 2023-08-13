@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_types",
+  "info": {
+    "singularName": "job-type",
+    "pluralName": "job-types",
+    "displayName": "jobType",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "details": {
+      "type": "string"
+    },
+    "profileDetails": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::profile-detail.profile-detail",
+      "mappedBy": "jobTypes"
+    }
+  }
+}

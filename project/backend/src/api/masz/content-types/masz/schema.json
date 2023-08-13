@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "maszs",
+  "info": {
+    "singularName": "masz",
+    "pluralName": "maszs",
+    "displayName": "masz"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sd": {
+      "type": "json"
+    }
+  }
+}
